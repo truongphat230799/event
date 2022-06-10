@@ -17,7 +17,8 @@ Blockly.Blocks["yolobit_after_second_do"] = {
             name: "ACTION"
           }
         ],
-        
+        previousStatement: null,
+        nextStatement: null,
         helpUrl: "",
       });
     },
@@ -25,14 +26,11 @@ Blockly.Blocks["yolobit_after_second_do"] = {
   
   Blockly.Python["yolobit_after_second_do"] = function (block) {
     var second = Blockly.Python.valueToCode(block, 'SECOND', Blockly.Python.ORDER_ATOMIC);
-    var statements_action = Blockly.Python.statementToCode(block, 'ACTION');
-    globals = globals.length ? Blockly.Python.INDENT + 'global ' + globals.join(', ') : '';
-
-    var cbFunctionName = Blockly.Python.provideFunction_(self,
-    ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(' + variable_message + '):',
-      globals,
-      statements_action || Blockly.Python.PASS
-    ]);
+    var cbFunctionName = Blockly.Python.provideFunction_(
+        'ble_on_rx_callback',
+        ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(' + variable_message + '):',
+          statements_action || Blockly.Python.PASS
+        ]);
     
       // TODO: Assemble Python into code variable.
     var code = "";
@@ -44,7 +42,7 @@ Blockly.Blocks["yolobit_after_second_do"] = {
       this.jsonInit({
         message0: " khi %1 thực hiện %2 %3",
         args0: [
-          { variable: "điều kiện",
+          { name: "VALUE",
             type: "input_dummy" },
           { type: "input_dummy" },
           {
@@ -52,7 +50,8 @@ Blockly.Blocks["yolobit_after_second_do"] = {
             name: "ACTION"
           }          
         ],
-        
+        previousStatement: null,
+        nextStatement: null,
         colour: "#ECCB00"
       });
     }
@@ -61,14 +60,11 @@ Blockly.Blocks["yolobit_after_second_do"] = {
   Blockly.Python["yolobit_wait_for"] = function(block) {
     // TODO: Assemble Python into code variable.
     var statements_action = Blockly.Python.statementToCode(block, 'ACTION');
-    globals = globals.length ? Blockly.Python.INDENT + 'global ' + globals.join(', ') : '';
-
-    var cbFunctionName = Blockly.Python.provideFunction_(self,
-    ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(' + variable_message + '):',
-      globals,
-      statements_action || Blockly.Python.PASS
-    ]);
-    var code = "";
+    var cbFunctionName = Blockly.Python.provideFunction_(
+        'ble_on_rx_callback',
+        ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(' + variable_message + '):',
+          statements_action || Blockly.Python.PASS
+        ]);
     // TODO: Change ORDER_NONE to the correct strength.
     return code;
   };

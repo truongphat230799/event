@@ -17,8 +17,7 @@ Blockly.Blocks["yolobit_after_second_do"] = {
             name: "ACTION"
           }
         ],
-        previousStatement: null,
-        nextStatement: null,
+        
         helpUrl: "",
       });
     },
@@ -27,7 +26,7 @@ Blockly.Blocks["yolobit_after_second_do"] = {
   Blockly.Python["yolobit_after_second_do"] = function (block) {
     var second = Blockly.Python.valueToCode(block, 'SECOND', Blockly.Python.ORDER_ATOMIC);
     var cbFunctionName = Blockly.Python.provideFunction_(
-        'ble_on_rx_callback',
+        '    ',
         ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(' + variable_message + '):',
           statements_action || Blockly.Python.PASS
         ]);
@@ -50,8 +49,7 @@ Blockly.Blocks["yolobit_after_second_do"] = {
             name: "ACTION"
           }          
         ],
-        previousStatement: null,
-        nextStatement: null,
+        
         colour: "#ECCB00"
       });
     }
@@ -61,7 +59,7 @@ Blockly.Blocks["yolobit_after_second_do"] = {
     // TODO: Assemble Python into code variable.
     var statements_action = Blockly.Python.statementToCode(block, 'ACTION');
     var cbFunctionName = Blockly.Python.provideFunction_(
-        'ble_on_rx_callback',
+        '',
         ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(' + variable_message + '):',
           statements_action || Blockly.Python.PASS
         ]);

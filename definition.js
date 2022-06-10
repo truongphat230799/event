@@ -16,9 +16,7 @@ Blockly.Blocks["yolobit_after_second_do"] = {
             type: "input_statement", 
             name: "ACTION"
           }
-        ],
-        previousStatement: null,
-        nextStatement: null,
+        ],        
         helpUrl: "",
       });
     },

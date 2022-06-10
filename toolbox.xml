@@ -7,7 +7,6 @@
         </shadow>
       </value>      
     </block>
-    <block type="yolobit_wait_for"/>
-    <block type="yolobit_get_messages"/>
+    
   </category>
 </xml>

@@ -72,44 +72,4 @@ Blockly.Blocks["yolobit_after_second_do"] = {
     // TODO: Change ORDER_NONE to the correct strength.
     return code;
   };
-Blockly.Blocks["yolobit_get_messages"] = {
-    init: function() {
-      this.jsonInit({
-        message0: " khi nhận được %1 thực hiện %3 %4",
-        args0: [
-          {
-            type: "field_dropdown",
-            name: "DATA",
-            options: [
-              ["thông điệp 1", "THÔNG ĐIỆP 1"],
-              ["thông điệp 2", "THÔNG ĐIỆP 2"],
-              ["thông điệp 3", "THÔNG ĐIỆP 3"],
-              ["thông điệp 4", "THÔNG ĐIỆP 4"],
-              ["thông điệp 5", "THÔNG ĐIỆP 5"]              
-            ]
-          },
-          { type: "input_dummy" },
-          {
-            type: "input_statement", 
-            name: "ACTION"
-          }          
-        ],
-        colour: "#ECCB00"
-      });
-    }
-  };
-  
-  Blockly.Python["yolobit_get_messages"] = function(block) {
-    var dropdown_data = block.getFieldValue("DATA");
-    // TODO: Assemble Python into code variable.
-    var statements_action = Blockly.Python.statementToCode(block, 'ACTION');
-    var cbFunctionName = Blockly.Python.provideFunction_(
-        '',
-        ['def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(' + variable_message + '):',
-          statements_action || Blockly.Python.PASS
-        ]);
-    
-    var code = "";    
-    // TODO: Change ORDER_NONE to the correct strength.
-    return code;
-  };
+

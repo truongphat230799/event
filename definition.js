@@ -42,14 +42,13 @@ Blockly.Blocks["yolobit_after_second_do"] = {
       this.jsonInit({
         message0: " khi %1 thực hiện %2 %3",
         args0: [
-          { type: "input_dummy"},
+          { "variable":điều kiện, "type": "field_variable", "name": "message"},
           { type: "input_dummy" },
           {
             type: "input_statement", 
             name: "ACTION"
           }          
-        ],
-        output: null,
+        ],        
         colour: "#ECCB00"
       });
     }

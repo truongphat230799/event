@@ -17,6 +17,7 @@ Blockly.Blocks["yolobit_after_second_do"] = {
             name: "ACTION"
           }
         ],
+     
         helpUrl: "",
       });
     },
@@ -48,7 +49,7 @@ Blockly.Blocks["yolobit_after_second_do"] = {
             name: "ACTION"
           }          
         ],
-       
+        
         colour: "#ECCB00"
       });
     }
@@ -65,8 +66,7 @@ Blockly.Blocks["yolobit_after_second_do"] = {
     // TODO: Change ORDER_NONE to the correct strength.
     return code;
   };
-
-  Blockly.Blocks["yolobit_get_messages"] = {
+Blockly.Blocks["yolobit_get_messages"] = {
     init: function() {
       this.jsonInit({
         message0: " khi nhận được %1 thực hiện %3 %4",
@@ -107,3 +107,5 @@ Blockly.Blocks["yolobit_after_second_do"] = {
     // TODO: Change ORDER_NONE to the correct strength.
     return code;
   };
+
+  

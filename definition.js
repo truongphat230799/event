@@ -17,7 +17,8 @@ Blockly.Blocks["yolobit_after_second_do"] = {
             name: "ACTION"
           }
         ],
-       
+        previousStatement: null,
+        nextStatement: null,
         helpUrl: "",
       });
     },
@@ -44,15 +45,14 @@ Blockly.Blocks["yolobit_after_second_do"] = {
       this.jsonInit({
         message0: " khi %1 thực hiện %2 %3",
         args0: [
-          { variable: "điều kiện",
-            type: "input_dummy" },
+          {type: "input_dummy" },
           { type: "input_dummy" },
           {
             type: "input_statement", 
             name: "ACTION"
           }          
         ],
-        
+        output: null,
         colour: "#ECCB00"
       });
     }
@@ -72,4 +72,3 @@ Blockly.Blocks["yolobit_after_second_do"] = {
     // TODO: Change ORDER_NONE to the correct strength.
     return code;
   };
-

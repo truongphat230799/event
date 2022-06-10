@@ -17,8 +17,6 @@ Blockly.Blocks["yolobit_after_second_do"] = {
             name: "ACTION"
           }
         ],
-        previousStatement: null,
-        nextStatement: null,
         helpUrl: "",
       });
     },
@@ -50,8 +48,7 @@ Blockly.Blocks["yolobit_after_second_do"] = {
             name: "ACTION"
           }          
         ],
-        previousStatement: null,
-        nextStatement: null,
+       
         colour: "#ECCB00"
       });
     }

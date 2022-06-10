@@ -1,0 +1,13 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+  <category name="DS1307" colour="#006600" icon="clock">
+    <block type="yolobit_after_second_do">
+      <value name="SECOND">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      
+    </block>
+    <block type="yolobit_wait_for"/>
+  </category>
+</xml>
